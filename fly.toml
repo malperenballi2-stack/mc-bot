@@ -2,7 +2,11 @@ app = "mc-bot"
 primary_region = "fra"
 
 [build]
-  builder = "heroku/buildpacks:20"
+  builder = "paketobuildpacks/builder:base"
 
-[processes]
-  app = "npm start"
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 0
