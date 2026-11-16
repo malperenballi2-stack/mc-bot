@@ -1,0 +1,8 @@
+app = "mc-bot"
+primary_region = "fra"
+
+[build]
+  builder = "heroku/buildpacks:20"
+
+[processes]
+  app = "npm start"
